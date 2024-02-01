@@ -1,4 +1,4 @@
-package Paq_1;
+package paq_1_1;
 
 public class List<T extends Object> {
 	private int def = 10;

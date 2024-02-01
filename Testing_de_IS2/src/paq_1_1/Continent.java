@@ -1,4 +1,4 @@
-package Paq_1;
+package paq_1_1;
 
 public class Continent extends Template<Country>{
 	

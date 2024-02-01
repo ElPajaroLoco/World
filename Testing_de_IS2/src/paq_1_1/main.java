@@ -1,4 +1,4 @@
-package Paq_1;
+package paq_1_1;
 
 public class main {
 	public static void main(String[] args) {
