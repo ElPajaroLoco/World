@@ -10,9 +10,9 @@ public class Template<T extends Object> {
 	public Template() {
 		this.name = "DEF_country";
 		this.numCountries = 7;
-		this.list = new List<T>();
+		/*this.list = new List<T>();
 		for (int i = 0; i < this.numCountries; i++)
-			list.addElem((T) new Object());
+			list.addElem((T) new Object());*/
 	}
 	
 	public String getName() {

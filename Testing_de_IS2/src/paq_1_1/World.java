@@ -4,6 +4,9 @@ public class World extends Template<Continent>{
 	
 	public World() {
 		this.type = "World";
+		this.list = new List<Continent>();
+		for (int i = 0; i < this.getNumCountries(); i++)
+			list.addElem(new Continent());
 	}
 	
 	/*private String name; 

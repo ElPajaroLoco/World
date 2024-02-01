@@ -4,6 +4,9 @@ public class Continent extends Template<Country>{
 	
 	public Continent() {
 		this.type = "Continent";
+		this.list = new List<Country>();
+		for (int i = 0; i < this.getNumCountries(); i++)
+			list.addElem(new Country());
 	}
 	/*private int numCountries;
 	private List<Country> list;
