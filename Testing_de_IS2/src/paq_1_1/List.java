@@ -14,6 +14,10 @@ public class List<T extends Object> {
 		this.elem[counter++] = t;
 	}
 	
+	public T getElem(int idx) {
+		return elem[idx];
+	}
+	
 	public String toString() {
 		StringBuilder str = new StringBuilder();
 		
