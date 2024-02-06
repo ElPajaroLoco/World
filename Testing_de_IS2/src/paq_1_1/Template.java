@@ -5,7 +5,7 @@ public class Template<T extends Object> {
 	private int num;
 	protected List<T> list;
 	private String name;
-	private int population;
+	private long population;
 	
 	public Template() {
 		this.name = "DEF_name";
@@ -20,11 +20,11 @@ public class Template<T extends Object> {
 		this.name = name;
 	}
 
-	public int getPopulation() {
+	public long getPopulation() {
 		return population;
 	}
 
-	public void setPopulation(int population) {
+	public void setPopulation(long population) {
 		this.population = population;
 	}
 	

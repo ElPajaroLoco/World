@@ -18,6 +18,10 @@ public class List<T extends Object> {
 		return elem[idx];
 	}
 	
+	public int getNum() {
+		return this.counter;
+	}
+	
 	public String toString() {
 		StringBuilder str = new StringBuilder();
 		
