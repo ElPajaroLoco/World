@@ -1,5 +1,6 @@
 package paq_1_1;
 
+import java.util.ArrayList;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -9,11 +10,11 @@ public class Continent extends Template<Country>{
 	
 	public Continent() {
 		this.type = "Continent";
-		this.list = new List<Country>();
+		this.list = new ArrayList<Country>();
 		this.languages = new TreeSet<String>();
 		for (int i = 0; i < this.getNum(); i++) {
-			list.addElem(new Country());
-			languages.add(list.getElem(i).Olanguage);
+			list.add(new Country());
+			languages.add(list.get(i).Olanguage);
 		}
 	}
 	
@@ -21,16 +22,16 @@ public class Continent extends Template<Country>{
 		this.type = "Continent";
 		this.setName(continent);
 		this.setPopulation(population);
-		this.list = new List<Country>();
+		this.list = new ArrayList<Country>();
 		initCountries();
 	}
 
 	public String toString() {
-		String str = "Name: " + this.getName() + ". Num of countries: " + this.list.getNum() + "\n";
+		String str = "Name: " + this.getName() + ". Num of countries: " + this.list.size() + "\n";
 		str += "-".repeat(40) + "\n";
 		str += "\nContinent Languages: \n";
-		for (int i = 0; i < this.list.getNum(); i++)
-			str += this.list.getElem(i).getOlanguage() + "\n";
+		for (int i = 0; i < this.list.size(); i++)
+			str += this.list.get(i).getOlanguage() + "\n";
 		str += "\nList of Countries: \n" + list.toString();
 		return str + "\n\n\n";
 	}
@@ -38,6 +39,6 @@ public class Continent extends Template<Country>{
 	private void initCountries() {
 		for (CountriesEnum c : CountriesEnum.values())
 			if (c.getContinent().toString() == this.getName())
-				this.list.addElem(new Country(c.name(), c.getPopulation(), c.getLanguage()));
+				this.list.add(new Country(c.name(), c.getPopulation(), c.getLanguage()));
 	}
 }

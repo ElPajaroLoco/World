@@ -1,5 +1,7 @@
 package paq_1_1;
 
+import java.util.List;
+
 public class Template<T extends Object> {
 	protected String type;
 	private int num;
